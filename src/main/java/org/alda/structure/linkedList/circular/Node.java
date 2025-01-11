@@ -1,6 +1,6 @@
-package org.example.structure.linkedList.simple;
+package org.alda.structure.linkedList.circular;
 
-import org.example.common.Printable;
+import org.alda.common.Printable;
 
 public class Node<T> implements Printable {
     public T data;
@@ -8,12 +8,12 @@ public class Node<T> implements Printable {
 
     public Node(T data) {
         this.data = data;
-        next = null;
+        this.next = null;
     }
 
     public void print() {
         System.out.print("Data: " + data);
-        if(next != null) {
+        if (next != null) {
             System.out.print(", Next: " + next.data);
         }
     }

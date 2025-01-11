@@ -1,6 +1,6 @@
-package org.example.structure.linkedList.doubly;
+package org.alda.structure.linkedList.doubly;
 
-import org.example.common.Printable;
+import org.alda.common.Printable;
 
 public class DoublyLinkedList<T> implements Printable {
     public Node<T> head;

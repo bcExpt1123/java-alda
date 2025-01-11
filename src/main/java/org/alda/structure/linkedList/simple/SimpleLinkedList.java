@@ -1,6 +1,6 @@
-package org.example.structure.linkedList.simple;
+package org.alda.structure.linkedList.simple;
 
-import org.example.common.Printable;
+import org.alda.common.Printable;
 
 public class SimpleLinkedList<T> implements Printable {
     public Node<T> head;

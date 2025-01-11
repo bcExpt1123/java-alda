@@ -1,6 +1,6 @@
-package org.example.structure.linkedList.circular;
+package org.alda.structure.linkedList.circular;
 
-import org.example.common.Printable;
+import org.alda.common.Printable;
 
 public class CircularLinkedList<T> implements Printable {
     public Node<T> head;

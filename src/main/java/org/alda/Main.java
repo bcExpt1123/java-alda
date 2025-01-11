@@ -1,12 +1,10 @@
-package org.example;
+package org.alda;
 
-import org.example.structure.linkedList.circular.CircularLinkedList;
-import org.example.structure.linkedList.doubly.DoublyLinkedList;
-import org.example.structure.linkedList.simple.Node;
-import org.example.structure.linkedList.simple.SimpleLinkedList;
+import org.alda.structure.linkedList.circular.CircularLinkedList;
+import org.alda.structure.linkedList.doubly.DoublyLinkedList;
+import org.alda.structure.linkedList.simple.Node;
+import org.alda.structure.linkedList.simple.SimpleLinkedList;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         testSimpleLinkedList();
