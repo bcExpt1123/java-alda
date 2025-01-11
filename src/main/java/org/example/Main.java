@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.structure.linkedList.circular.CircularLinkedList;
 import org.example.structure.linkedList.doubly.DoublyLinkedList;
+import org.example.structure.linkedList.simple.Node;
 import org.example.structure.linkedList.simple.SimpleLinkedList;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -19,7 +20,11 @@ public class Main {
 
         intList.insertAfter(intList.head, 22);
 
+        Node<Integer> head = intList.delete(3);
+
         intList.print();
+
+        head.print();
     }
 
     public static void testDoublyLinkedList() {

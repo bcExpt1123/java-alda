@@ -1,5 +1,6 @@
 package org.example.structure.linkedList.simple;
 
+import jdk.jshell.spi.SPIResolutionException;
 import org.example.common.Printable;
 
 public class SimpleLinkedList<T> implements Printable {
@@ -28,6 +29,31 @@ public class SimpleLinkedList<T> implements Printable {
         Node<T> newNode = new Node<>(data);
         newNode.next = node.next;
         node.next = newNode;
+    }
+
+    public Node<T> delete(T key) {
+        Node<T> node = head;
+        if (node != null && node.data.equals(key)) {
+            head = node.next;
+            node = null;
+            return head;
+        }
+        Node<T> prev = null;
+        while (node != null) {
+            if(node.data.equals(key)) {
+                break;
+            }
+            prev = node;
+            node = node.next;
+        }
+        if(node == null) {
+            return head;
+        }
+        if(prev != null){
+            prev.next = node.next;
+        }
+        node = null;
+        return head;
     }
 
     public void print() {
