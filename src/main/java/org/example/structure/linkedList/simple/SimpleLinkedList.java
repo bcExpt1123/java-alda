@@ -1,6 +1,5 @@
 package org.example.structure.linkedList.simple;
 
-import jdk.jshell.spi.SPIResolutionException;
 import org.example.common.Printable;
 
 public class SimpleLinkedList<T> implements Printable {
