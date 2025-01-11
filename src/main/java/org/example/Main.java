@@ -8,7 +8,7 @@ import org.example.structure.linkedList.simple.SimpleLinkedList;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        testCircularLinkedList();
+        testSimpleLinkedList();
     }
     public static void testSimpleLinkedList() {
         SimpleLinkedList<Integer> intList = new SimpleLinkedList<Integer>();
@@ -16,6 +16,8 @@ public class Main {
         intList.append(3);
         intList.append(4);
         intList.append(5);
+
+        intList.insertAfter(intList.head, 22);
 
         intList.print();
     }

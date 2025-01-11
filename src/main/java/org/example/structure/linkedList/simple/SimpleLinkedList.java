@@ -20,6 +20,16 @@ public class SimpleLinkedList<T> implements Printable {
         lastNode.next = newNode;
     }
 
+    public void insertAfter(Node<T> node, T data) {
+        if(node == null) {
+            System.out.println("The given previous node can not be null.");
+            return;
+        }
+        Node<T> newNode = new Node<>(data);
+        newNode.next = node.next;
+        node.next = newNode;
+    }
+
     public void print() {
         Node<T> current = head;
         while (current != null) {
