@@ -56,6 +56,17 @@ public class SimpleLinkedList<T> implements Printable {
         return head;
     }
 
+    public Boolean search(T key) {
+        Node<T> node = head;
+        while (node != null) {
+            if(node.data.equals(key)) {
+                return true;
+            }
+            node = node.next;
+        }
+        return false;
+    }
+
     public void print() {
         Node<T> current = head;
         while (current != null) {

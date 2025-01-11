@@ -25,6 +25,12 @@ public class Main {
         intList.print();
 
         head.print();
+
+        System.out.println();
+        System.out.println(intList.search(2));
+        System.out.println(intList.search(3));
+        System.out.println(intList.search(4));
+        System.out.println(intList.search(5));
     }
 
     public static void testDoublyLinkedList() {
