@@ -5,10 +5,12 @@ import org.alda.structure.linkedList.doubly.DoublyLinkedList;
 import org.alda.structure.linkedList.simple.ISimpleLinkedList;
 import org.alda.structure.linkedList.simple.Node;
 import org.alda.structure.linkedList.simple.SimpleLinkedList;
+import org.alda.structure.linkedList.sorted.ISortedLinkedList;
+import org.alda.structure.linkedList.sorted.SortedLinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        testSimpleLinkedList();
+        testSortedLinkedList();
     }
     public static void testSimpleLinkedList() {
         ISimpleLinkedList<Integer> intList = new SimpleLinkedList<Integer>();
@@ -49,6 +51,18 @@ public class Main {
         intList.append(3);
         intList.append(4);
         intList.append(5);
+
+        intList.print();
+    }
+
+    public static void testSortedLinkedList() {
+        ISortedLinkedList<Integer> intList = new SortedLinkedList<Integer>();
+
+        intList.sortedInsert(10);
+        intList.sortedInsert(50);
+        intList.sortedInsert(30);
+        intList.sortedInsert(70);
+        intList.sortedInsert(20);
 
         intList.print();
     }

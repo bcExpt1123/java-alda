@@ -70,6 +70,10 @@ public class SimpleLinkedList<T> implements ISimpleLinkedList<T> {
         return head;
     }
 
+    public void setHead(Node<T> head) {
+        this.head = head;
+    }
+
     public void print() {
         Node<T> current = head;
         while (current != null) {

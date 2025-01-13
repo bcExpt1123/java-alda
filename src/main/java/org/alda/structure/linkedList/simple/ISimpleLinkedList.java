@@ -7,5 +7,6 @@ public interface ISimpleLinkedList<T> extends Printable {
     void insertAfter(Node<T> node, T data);
     Node<T> delete(T key);
     Node<T> getHead();
+    void setHead(Node<T> head);
     Boolean search(T key);
 }
