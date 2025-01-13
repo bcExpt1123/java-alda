@@ -2,8 +2,8 @@ package org.alda.structure.linkedList.simple;
 
 import org.alda.common.Printable;
 
-public class SimpleLinkedList<T> implements Printable {
-    public Node<T> head;
+public class SimpleLinkedList<T> implements ISimpleLinkedList<T> {
+    private Node<T> head;
     public SimpleLinkedList() {
         head = null;
     }
@@ -64,6 +64,10 @@ public class SimpleLinkedList<T> implements Printable {
             node = node.next;
         }
         return false;
+    }
+
+    public Node<T> getHead() {
+        return head;
     }
 
     public void print() {

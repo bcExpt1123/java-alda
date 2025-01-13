@@ -2,6 +2,7 @@ package org.alda;
 
 import org.alda.structure.linkedList.circular.CircularLinkedList;
 import org.alda.structure.linkedList.doubly.DoublyLinkedList;
+import org.alda.structure.linkedList.simple.ISimpleLinkedList;
 import org.alda.structure.linkedList.simple.Node;
 import org.alda.structure.linkedList.simple.SimpleLinkedList;
 
@@ -10,13 +11,13 @@ public class Main {
         testSimpleLinkedList();
     }
     public static void testSimpleLinkedList() {
-        SimpleLinkedList<Integer> intList = new SimpleLinkedList<Integer>();
+        ISimpleLinkedList<Integer> intList = new SimpleLinkedList<Integer>();
         intList.append(2);
         intList.append(3);
         intList.append(4);
         intList.append(5);
 
-        intList.insertAfter(intList.head, 22);
+        intList.insertAfter(intList.getHead(), 22);
 
         Node<Integer> head = intList.delete(3);
 
