@@ -1,6 +1,8 @@
 package org.alda;
 
 import org.alda.structure.linkedList.circular.CircularLinkedList;
+import org.alda.structure.linkedList.deque.DoublyEndedList;
+import org.alda.structure.linkedList.deque.IDoublyEndedList;
 import org.alda.structure.linkedList.doubly.DoublyLinkedList;
 import org.alda.structure.linkedList.simple.ISimpleLinkedList;
 import org.alda.structure.linkedList.simple.Node;
@@ -10,7 +12,7 @@ import org.alda.structure.linkedList.sorted.SortedLinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        testSortedLinkedList();
+        testDoublyEndedList();
     }
     public static void testSimpleLinkedList() {
         ISimpleLinkedList<Integer> intList = new SimpleLinkedList<Integer>();
@@ -63,6 +65,20 @@ public class Main {
         intList.sortedInsert(30);
         intList.sortedInsert(70);
         intList.sortedInsert(20);
+
+        intList.print();
+    }
+
+    public static void testDoublyEndedList(){
+        IDoublyEndedList<Integer> intList = new DoublyEndedList<>();
+
+        intList.appendEnd(1);
+        intList.appendEnd(2);
+        intList.appendFront(3);
+        intList.appendFront(4);
+        intList.appendEnd(5);
+        intList.appendFront(6);
+        intList.appendEnd(7);
 
         intList.print();
     }
