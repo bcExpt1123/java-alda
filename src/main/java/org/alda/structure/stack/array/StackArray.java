@@ -1,4 +1,4 @@
-package org.alda.structure.stack;
+package org.alda.structure.stack.array;
 
 import java.util.ArrayList;
 

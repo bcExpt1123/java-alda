@@ -9,8 +9,8 @@ import org.alda.structure.linkedList.simple.Node;
 import org.alda.structure.linkedList.simple.SimpleLinkedList;
 import org.alda.structure.linkedList.sorted.ISortedLinkedList;
 import org.alda.structure.linkedList.sorted.SortedLinkedList;
-import org.alda.structure.stack.IStackArray;
-import org.alda.structure.stack.StackArray;
+import org.alda.structure.stack.array.IStackArray;
+import org.alda.structure.stack.array.StackArray;
 
 public class Main {
     public static void main(String[] args) {
