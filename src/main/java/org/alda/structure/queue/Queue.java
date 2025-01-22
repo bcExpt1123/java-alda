@@ -42,7 +42,7 @@ public class Queue<T> implements IQueue<T> {
         if (items.isEmpty()) {
             return null;
         }
-        return items.removeLast();
+        return items.removeFirst();
     }
 
     /**
