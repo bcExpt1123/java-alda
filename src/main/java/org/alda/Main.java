@@ -9,6 +9,8 @@ import org.alda.structure.linkedList.simple.Node;
 import org.alda.structure.linkedList.simple.SimpleLinkedList;
 import org.alda.structure.linkedList.sorted.ISortedLinkedList;
 import org.alda.structure.linkedList.sorted.SortedLinkedList;
+import org.alda.structure.queue.IQueue;
+import org.alda.structure.queue.Queue;
 import org.alda.structure.stack.array.IStackArray;
 import org.alda.structure.stack.array.StackArray;
 import org.alda.structure.stack.linkedList.IStackLinkedList;
@@ -16,7 +18,7 @@ import org.alda.structure.stack.linkedList.StackLinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        testStackLinkedList();
+        testQueue();
     }
     public static void testSimpleLinkedList() {
         ISimpleLinkedList<Integer> intList = new SimpleLinkedList<Integer>();
@@ -109,5 +111,24 @@ public class Main {
         System.out.println(intStack.pop());
         System.out.println(intStack.peek());
         System.out.println(intStack.pop());
+    }
+
+    public static void testQueue(){
+        IQueue<Integer> intQueue = new Queue<>();
+
+        intQueue.enqueue(1);
+        intQueue.enqueue(2);
+        intQueue.enqueue(3);
+        intQueue.enqueue(4);
+        intQueue.enqueue(5);
+
+        Integer item = intQueue.dequeue();
+
+        Integer front = intQueue.front();
+        Integer rear = intQueue.rear();
+
+        System.out.println(item);
+        System.out.println(front);
+        System.out.println(rear);
     }
 }
