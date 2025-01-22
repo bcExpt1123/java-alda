@@ -11,10 +11,12 @@ import org.alda.structure.linkedList.sorted.ISortedLinkedList;
 import org.alda.structure.linkedList.sorted.SortedLinkedList;
 import org.alda.structure.stack.array.IStackArray;
 import org.alda.structure.stack.array.StackArray;
+import org.alda.structure.stack.linkedList.IStackLinkedList;
+import org.alda.structure.stack.linkedList.StackLinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        testStackArray();
+        testStackLinkedList();
     }
     public static void testSimpleLinkedList() {
         ISimpleLinkedList<Integer> intList = new SimpleLinkedList<Integer>();
@@ -87,6 +89,18 @@ public class Main {
 
     public static void testStackArray(){
         IStackArray<Integer> intStack = new StackArray<>();
+
+        intStack.push(1);
+        intStack.push(2);
+        intStack.push(3);
+
+        System.out.println(intStack.pop());
+        System.out.println(intStack.peek());
+        System.out.println(intStack.pop());
+    }
+
+    public static void testStackLinkedList(){
+        IStackLinkedList<Integer> intStack = new StackLinkedList<>();
 
         intStack.push(1);
         intStack.push(2);
