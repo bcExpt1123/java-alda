@@ -11,6 +11,8 @@ import org.alda.structure.linkedList.sorted.ISortedLinkedList;
 import org.alda.structure.linkedList.sorted.SortedLinkedList;
 import org.alda.structure.queue.IQueue;
 import org.alda.structure.queue.Queue;
+import org.alda.structure.queue.array.QueueArray;
+import org.alda.structure.queue.linkedList.QueueLinkedList;
 import org.alda.structure.stack.array.IStackArray;
 import org.alda.structure.stack.array.StackArray;
 import org.alda.structure.stack.linkedList.IStackLinkedList;
@@ -123,11 +125,61 @@ public class Main {
         intQueue.enqueue(5);
 
         Integer item = intQueue.dequeue();
+        Integer item1 = intQueue.dequeue();
+        Integer item2 = intQueue.dequeue();
 
         Integer front = intQueue.front();
         Integer rear = intQueue.rear();
 
         System.out.println(item);
+        System.out.println(item1);
+        System.out.println(item2);
+        System.out.println(front);
+        System.out.println(rear);
+    }
+
+    public static void testQueueArray(){
+        IQueue<Integer> intQueue = new QueueArray<>();
+
+        intQueue.enqueue(1);
+        intQueue.enqueue(2);
+        intQueue.enqueue(3);
+        intQueue.enqueue(4);
+        intQueue.enqueue(5);
+
+        Integer item = intQueue.dequeue();
+        Integer item1 = intQueue.dequeue();
+        Integer item2 = intQueue.dequeue();
+
+        Integer front = intQueue.front();
+        Integer rear = intQueue.rear();
+
+        System.out.println(item);
+        System.out.println(item1);
+        System.out.println(item2);
+        System.out.println(front);
+        System.out.println(rear);
+    }
+
+    public static void testQueueLinkedList(){
+        IQueue<Integer> intQueue = new QueueLinkedList<>();
+
+        intQueue.enqueue(1);
+        intQueue.enqueue(2);
+        intQueue.enqueue(3);
+        intQueue.enqueue(4);
+        intQueue.enqueue(5);
+
+        Integer item = intQueue.dequeue();
+        Integer item1 = intQueue.dequeue();
+        Integer item2 = intQueue.dequeue();
+
+        Integer front = intQueue.front();
+        Integer rear = intQueue.rear();
+
+        System.out.println(item);
+        System.out.println(item1);
+        System.out.println(item2);
         System.out.println(front);
         System.out.println(rear);
     }
