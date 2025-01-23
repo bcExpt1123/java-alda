@@ -13,6 +13,8 @@ import org.alda.structure.queue.IQueue;
 import org.alda.structure.queue.Queue;
 import org.alda.structure.queue.array.QueueArray;
 import org.alda.structure.queue.linkedList.QueueLinkedList;
+import org.alda.structure.queue.priority.IPriorityQueue;
+import org.alda.structure.queue.priority.PriorityQueue;
 import org.alda.structure.stack.array.IStackArray;
 import org.alda.structure.stack.array.StackArray;
 import org.alda.structure.stack.linkedList.IStackLinkedList;
@@ -20,7 +22,7 @@ import org.alda.structure.stack.linkedList.StackLinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        testQueue();
+        testPriorityQueue();
     }
     public static void testSimpleLinkedList() {
         ISimpleLinkedList<Integer> intList = new SimpleLinkedList<Integer>();
@@ -182,5 +184,26 @@ public class Main {
         System.out.println(item2);
         System.out.println(front);
         System.out.println(rear);
+    }
+
+    public static void testPriorityQueue(){
+        IPriorityQueue<Integer> intQueue = new PriorityQueue<>();
+
+        intQueue.enqueue(2, 1);
+        intQueue.enqueue(32, 25);
+        intQueue.enqueue(48, 0);
+        intQueue.enqueue(15, 3);
+        intQueue.enqueue(36, 2);
+        intQueue.enqueue(27, 4);
+
+        Integer item = intQueue.dequeue();
+        Integer item1 = intQueue.dequeue();
+        Integer item2 = intQueue.dequeue();
+        Integer item3 = intQueue.dequeue();
+
+        System.out.println(item);
+        System.out.println(item1);
+        System.out.println(item2);
+        System.out.println(item3);
     }
 }
