@@ -19,10 +19,11 @@ import org.alda.structure.stack.array.IStackArray;
 import org.alda.structure.stack.array.StackArray;
 import org.alda.structure.stack.linkedList.IStackLinkedList;
 import org.alda.structure.stack.linkedList.StackLinkedList;
+import org.alda.structure.tree.bst.BinarySearchTree;
 
 public class Main {
     public static void main(String[] args) {
-        testPriorityQueue();
+        testBST();
     }
     public static void testSimpleLinkedList() {
         ISimpleLinkedList<Integer> intList = new SimpleLinkedList<Integer>();
@@ -205,5 +206,18 @@ public class Main {
         System.out.println(item1);
         System.out.println(item2);
         System.out.println(item3);
+    }
+
+    public static void testBST(){
+        BinarySearchTree<Integer> bst = new BinarySearchTree<>();
+        bst.insert(5);
+        bst.insert(3);
+        bst.insert(7);
+        bst.insert(1);
+        bst.insert(20);
+        bst.insert(4);
+
+        System.out.println(bst.inorderTraversal());
+        System.out.println(bst.search(4));
     }
 }
