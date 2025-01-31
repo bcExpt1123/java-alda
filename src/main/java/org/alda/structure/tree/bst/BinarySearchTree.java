@@ -1,9 +1,13 @@
 package org.alda.structure.tree.bst;
 
-import org.alda.common.Comparer;
-
 import java.util.ArrayList;
 
+/**
+ * @author bcExpt1123
+ *
+ * Binary Search Tree
+ * @param <T>
+ */
 public class BinarySearchTree<T extends Comparable<T>> {
     Node<T> root;
 
