@@ -20,6 +20,10 @@ import org.alda.structure.stack.array.StackArray;
 import org.alda.structure.stack.linkedList.IStackLinkedList;
 import org.alda.structure.stack.linkedList.StackLinkedList;
 import org.alda.structure.tree.bst.BinarySearchTree;
+import org.alda.structure.tree.bst.bbt.AVL;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -219,5 +223,14 @@ public class Main {
 
         System.out.println(bst.inorderTraversal());
         System.out.println(bst.search(4));
+    }
+
+    public static void testAVL(){
+        AVL<Integer> avl = new AVL<>();
+        AVL.Node<Integer> root = null;
+        List<Integer> keys = Arrays.asList(10, 20, 30, 40, 50, 25);
+        for(Integer key : keys){
+            avl.insert(root, key);
+        }
     }
 }
