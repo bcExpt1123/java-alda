@@ -50,13 +50,17 @@ public class Comparer {
             // Compare as Numbers
             double numA = ((Number) a).doubleValue();
             double numB = ((Number) b).doubleValue();
-            if (numA >= numB) {
+            if (numA > numB) {
                 return 1;
             } else if (numA < numB) {
                 return -1;
             }
             return 0;
         } else {
+            if(a == null || b == null) {
+                throw new NullPointerException("Both arguments must be either Strings or Numbers.");
+            }
+
             throw new IllegalArgumentException("Both arguments must be either Strings or Numbers.");
         }
     }
