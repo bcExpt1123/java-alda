@@ -101,13 +101,13 @@ Implementation and usage of graphs.
 
 ## Usage
 
-Each algorithm and data structure has its own folder. Navigate to the folder of the algorithm or data structure you want to use and compile the Java file:
+Run code:
 ```sh
-javac FileName.java
+  mvn clean compile exec:java
 ```
-Run the compiled Java file:
+Run test:
 ```sh
-java FileName
+  mvn test
 ```
 
 ## Contributing
