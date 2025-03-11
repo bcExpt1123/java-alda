@@ -2,6 +2,7 @@
 
 This repository contains implementations of various algorithms and data structures in Java. It is intended as a resource for learning and reference.
 
+<!--
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -87,6 +88,7 @@ Implementation and usage of stacks.
 ### Graphs
 
 Implementation and usage of graphs.
+-->
 
 ## Installation
 
