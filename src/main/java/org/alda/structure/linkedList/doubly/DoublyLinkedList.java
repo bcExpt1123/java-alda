@@ -85,7 +85,6 @@ public class DoublyLinkedList<T> implements Printable {
         Node<T> current = head;
         while (current != null) {
             current.print();
-            System.out.println("\n");
             current = current.next;
         }
     }

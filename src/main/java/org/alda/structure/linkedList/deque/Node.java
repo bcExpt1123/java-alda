@@ -56,7 +56,7 @@ public class Node<T> implements Printable {
      * The output format is: {@code Data: <data>, Next: <next data>, Prev: <previous data>}
      */
     public void print(){
-        System.out.print("Data: " + data);
+        System.out.print("\nData: " + data);
         if (next != null) {
             System.out.print(", Next: " + next.data);
         }
