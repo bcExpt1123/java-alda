@@ -210,31 +210,39 @@ public class Main {
     }
 
     public static void testCircularLinkedList() {
+        System.out.println("\n=== Initialize Circular Linked List ===");
         CircularLinkedList<Integer> intList = new CircularLinkedList<Integer>();
 
+        System.out.println("Actions: \nAppend 2, 3, 4, 5");
         intList.append(2);
         intList.append(3);
         intList.append(4);
         intList.append(5);
 
+        System.out.print("\nPrint List (Forward):");
         intList.print();
     }
 
     public static void testSortedLinkedList() {
+        System.out.println("\n=== Initialize Sorted Linked List ===");
         ISortedLinkedList<Integer> intList = new SortedLinkedList<Integer>();
 
+        System.out.println("Actions: \nSorted Insert 10, 50, 30, 70, 20");
         intList.sortedInsert(10);
         intList.sortedInsert(50);
         intList.sortedInsert(30);
         intList.sortedInsert(70);
         intList.sortedInsert(20);
 
+        System.out.print("\nPrint List (Forward):");
         intList.print();
     }
 
     public static void testDoublyEndedList(){
+        System.out.println("\n=== Initialize Doubly Ended Linked List ===");
         IDoublyEndedList<Integer> intList = new DoublyEndedList<>();
 
+        System.out.println("Actions: \nAppend 1, 2, 3, 4, 5, 6, 7");
         intList.appendEnd(1);
         intList.appendEnd(2);
         intList.appendFront(3);
@@ -243,36 +251,43 @@ public class Main {
         intList.appendFront(6);
         intList.appendEnd(7);
 
+        System.out.print("\nPrint List (Forward):");
         intList.print();
     }
 
     public static void testStackArray(){
+        System.out.println("\n=== Initialize Stack Array ===");
         IStackArray<Integer> intStack = new StackArray<>();
 
+        System.out.println("Actions: \nPush 1, 2, 3");
         intStack.push(1);
         intStack.push(2);
         intStack.push(3);
 
-        System.out.println(intStack.pop());
-        System.out.println(intStack.peek());
-        System.out.println(intStack.pop());
+        System.out.println("\nPop: " + intStack.pop());
+        System.out.println("Peek: " + intStack.peek());
+        System.out.println("Pop: " + intStack.pop());
     }
 
     public static void testStackLinkedList(){
+        System.out.println("\n=== Initialize Stack Linked List ===");
         IStackLinkedList<Integer> intStack = new StackLinkedList<>();
 
+        System.out.println("Actions: \nPush 1, 2, 3");
         intStack.push(1);
         intStack.push(2);
         intStack.push(3);
 
-        System.out.println(intStack.pop());
-        System.out.println(intStack.peek());
-        System.out.println(intStack.pop());
+        System.out.println("\nPop: " + intStack.pop());
+        System.out.println("Peek: " + intStack.peek());
+        System.out.println("Pop: " + intStack.pop());
     }
 
     public static void testQueue(){
+        System.out.println("\n=== Initialize Queue ===");
         IQueue<Integer> intQueue = new Queue<>();
 
+        System.out.println("Actions: \nEnqueue 1, 2, 3, 4, 5");
         intQueue.enqueue(1);
         intQueue.enqueue(2);
         intQueue.enqueue(3);
@@ -286,16 +301,18 @@ public class Main {
         Integer front = intQueue.front();
         Integer rear = intQueue.rear();
 
-        System.out.println(item);
-        System.out.println(item1);
-        System.out.println(item2);
-        System.out.println(front);
-        System.out.println(rear);
+        System.out.println("\nDequeue: " + item);
+        System.out.println("Dequeue: " + item1);
+        System.out.println("Dequeue: " + item2);
+        System.out.println("Front: " + front);
+        System.out.println("Rear: " + rear);
     }
 
     public static void testQueueArray(){
+        System.out.println("\n=== Initialize Queue Array ===");
         IQueue<Integer> intQueue = new QueueArray<>();
 
+        System.out.println("Actions: \nEnqueue 1, 2, 3, 4, 5");
         intQueue.enqueue(1);
         intQueue.enqueue(2);
         intQueue.enqueue(3);
@@ -309,16 +326,18 @@ public class Main {
         Integer front = intQueue.front();
         Integer rear = intQueue.rear();
 
-        System.out.println(item);
-        System.out.println(item1);
-        System.out.println(item2);
-        System.out.println(front);
-        System.out.println(rear);
+        System.out.println("\nDequeue: " + item);
+        System.out.println("Dequeue: " + item1);
+        System.out.println("Dequeue: " + item2);
+        System.out.println("Front: " + front);
+        System.out.println("Rear: " + rear);
     }
 
     public static void testQueueLinkedList(){
+        System.out.println("\n=== Initialize Queue Linked List ===");
         IQueue<Integer> intQueue = new QueueLinkedList<>();
 
+        System.out.println("Actions: \nEnqueue 1, 2, 3, 4, 5");
         intQueue.enqueue(1);
         intQueue.enqueue(2);
         intQueue.enqueue(3);
@@ -332,21 +351,28 @@ public class Main {
         Integer front = intQueue.front();
         Integer rear = intQueue.rear();
 
-        System.out.println(item);
-        System.out.println(item1);
-        System.out.println(item2);
-        System.out.println(front);
-        System.out.println(rear);
+        System.out.println("\nDequeue: " + item);
+        System.out.println("Dequeue: " + item1);
+        System.out.println("Dequeue: " + item2);
+        System.out.println("Front: " + front);
+        System.out.println("Rear: " + rear);
     }
 
     public static void testPriorityQueue(){
+        System.out.println("\n=== Initialize Priority Queue ===");
         IPriorityQueue<Integer> intQueue = new PriorityQueue<>();
 
+        System.out.println("Actions: \n- Enqueue 2 with priority 1");
         intQueue.enqueue(2, 1);
+        System.out.println("- Enqueue 32 with priority 25");
         intQueue.enqueue(32, 25);
+        System.out.println("- Enqueue 48 with priority 0");
         intQueue.enqueue(48, 0);
+        System.out.println("- Enqueue 15 with priority 3");
         intQueue.enqueue(15, 3);
+        System.out.println("- Enqueue 36 with priority 2");
         intQueue.enqueue(36, 2);
+        System.out.println("- Enqueue 27 with priority 4");
         intQueue.enqueue(27, 4);
 
         Integer item = intQueue.dequeue();
@@ -354,14 +380,17 @@ public class Main {
         Integer item2 = intQueue.dequeue();
         Integer item3 = intQueue.dequeue();
 
-        System.out.println(item);
-        System.out.println(item1);
-        System.out.println(item2);
-        System.out.println(item3);
+        System.out.println("\nDequeue: " + item);
+        System.out.println("Dequeue: " + item1);
+        System.out.println("Dequeue: " + item2);
+        System.out.println("Dequeue: " + item3);
     }
 
     public static void testBST(){
+        System.out.println("\n=== Initialize Binary Search Tree ===");
         BinarySearchTree<Integer> bst = new BinarySearchTree<>();
+
+        System.out.println("Actions: \n- Insert 5, 3, 7, 1, 20, 4");
         bst.insert(5);
         bst.insert(3);
         bst.insert(7);
@@ -369,8 +398,12 @@ public class Main {
         bst.insert(20);
         bst.insert(4);
 
+        System.out.println("- Inorder Traversal ");
         System.out.println(bst.inorderTraversal());
-        System.out.println(bst.search(4));
+        System.out.print("\nSearch for 4: ");
+        org.alda.structure.tree.bst.Node<Integer> node = bst.search(4);
+        if (node != null) System.out.println("true");
+        else System.out.println("false");
     }
 
     public static void testAVL(){
