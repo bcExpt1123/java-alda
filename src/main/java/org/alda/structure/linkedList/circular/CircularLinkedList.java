@@ -63,8 +63,8 @@ public class CircularLinkedList<T> implements Printable {
     }
 
     /**
-     * Prints the data stored in each node of the circular linked list.
-     * The traversal stops when the list has looped back to the head.
+     * Prints the data of each node in the circular linked list in sequence, starting from the head.
+     * Traversal continues until the list loops back to the head node or if the list is empty.
      */
     public void print() {
         Node<T> current = head;
