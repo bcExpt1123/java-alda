@@ -78,8 +78,7 @@ public class DoublyLinkedList<T> implements Printable {
     }
 
     /**
-     * Prints the data stored in each node of the doubly linked list from head to tail.
-     * Each node's data is printed along with the data in its next and previous nodes, if available.
+     * Prints each node's data in the list from head to tail, including adjacent nodes' data if present.
      */
     public void print() {
         Node<T> current = head;
