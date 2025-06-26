@@ -136,13 +136,12 @@ public class SimpleLinkedList<T> implements ISimpleLinkedList<T> {
     }
 
     /**
-     * Prints the data stored in each node of the linked list from head to tail.
+     * Outputs the data of each node in the linked list sequentially from head to tail.
      */
     public void print() {
         Node<T> current = head;
         while (current != null) {
             current.print();
-            System.out.println("\n");
             current = current.next;
         }
     }

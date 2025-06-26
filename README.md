@@ -111,6 +111,14 @@ Run test:
 ```sh
   mvn test
 ```
+Run Check style:
+```sh
+  mvn checkstyle:check
+```
+Or
+```sh
+  mvn checkstyle:checkstyle
+```
 
 ## Contributing
 
