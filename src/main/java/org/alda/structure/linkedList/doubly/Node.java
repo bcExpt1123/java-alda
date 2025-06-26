@@ -44,8 +44,11 @@ public class Node<T> implements Printable {
     }
 
     /**
-     * Prints the data stored in this node, as well as the data in the next and previous nodes, if available.
-     * The output format is: {@code Data: <data>, Next: <next data>, Prev: <prev data>}
+     * Prints this node's data, along with the data of adjacent nodes if they exist.
+     *
+     * The output begins with a newline and follows the format:
+     * {@code Data: <data>, Next: <next data>, Prev: <prev data>}.
+     * The "Next" and "Prev" fields are included only if the corresponding nodes are present.
      */
     public void print() {
         System.out.print("\nData: " + data);

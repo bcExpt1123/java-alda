@@ -33,6 +33,13 @@ import java.util.Scanner;
 public class Main {
     private static final Scanner scanner = new Scanner(System.in);
 
+    /**
+     * Launches the interactive console application for demonstrating various data structures.
+     *
+     * Displays a main menu allowing users to select and explore different data structure categories, each with its own submenu and test demonstrations. The application continues running until the user chooses to exit.
+     *
+     * @param args command-line arguments (not used)
+     */
     public static void main(String[] args) {
         boolean running = true;
         
@@ -53,6 +60,9 @@ public class Main {
         }
         scanner.close();
     }
+    /**
+     * Displays the main menu options for selecting a data structure category or exiting the program.
+     */
     private static void displayMainMenu() {
         System.out.println("\n=== Data Structure Demonstration ===");
         System.out.println("1. Linked Lists");
@@ -63,6 +73,11 @@ public class Main {
         System.out.print("\nEnter your choice (1-5): ");
     }
 
+    /**
+     * Displays a submenu for selecting and testing different types of linked lists.
+     *
+     * Loops until the user chooses to return to the main menu. For each selection, runs the corresponding linked list demonstration and waits for user input before returning to the submenu.
+     */
     private static void linkedListMenu() {
         while (true) {
             System.out.println("\n=== Linked List Types ===");
@@ -89,6 +104,11 @@ public class Main {
         }
     }
 
+    /**
+     * Displays an interactive submenu for selecting and testing different stack implementations.
+     *
+     * Allows the user to choose between array-based and linked list-based stacks, runs the corresponding test demonstration, and returns to the main menu upon request.
+     */
     private static void stackMenu() {
         while (true) {
             System.out.println("\n=== Stack Types ===");
@@ -109,6 +129,12 @@ public class Main {
         }
     }
 
+    /**
+     * Displays an interactive submenu for selecting and testing different queue implementations.
+     *
+     * Presents options for simple queue, array-based queue, linked list-based queue, and priority queue.
+     * Executes the corresponding test method based on user selection and waits for user input before returning to the submenu.
+     */
     private static void queueMenu() {
         while (true) {
             System.out.println("\n=== Queue Types ===");
@@ -133,6 +159,11 @@ public class Main {
         }
     }
 
+    /**
+     * Displays a submenu for tree data structure demonstrations and runs the selected test.
+     *
+     * Presents options for Binary Search Tree and AVL Tree, executes the corresponding test method based on user input, and waits for user confirmation before returning.
+     */
     private static void treeMenu() {
         System.out.println("\n=== Tree Types ===");
         System.out.println("1. Binary Search Tree");
@@ -150,6 +181,12 @@ public class Main {
         pressEnterToContinue();
     }
 
+    /**
+     * Prompts the user to enter a menu choice and returns a valid integer within the specified range.
+     *
+     * @param max the maximum valid menu option (inclusive)
+     * @return the user's validated menu choice as an integer between 1 and {@code max}
+     */
     private static int getMenuChoice(int max) {
         while (true) {
             try {
@@ -164,11 +201,19 @@ public class Main {
         }
     }
 
+    /**
+     * Prompts the user to press Enter and waits for input before continuing.
+     */
     private static void pressEnterToContinue() {
         System.out.print("\nPress Enter to continue...");
         scanner.nextLine();
     }
 
+    /**
+     * Demonstrates basic operations on a simple linked list of integers, including appending, inserting, deleting, printing, and searching for elements.
+     *
+     * Initializes a simple linked list, performs a sequence of modifications, prints the list and head node, and displays search results for specific values.
+     */
     public static void testSimpleLinkedList() {
         System.out.println("\n=== Initialize Simple Linked List ===");
         ISimpleLinkedList<Integer> intList = new SimpleLinkedList<Integer>();
@@ -196,6 +241,11 @@ public class Main {
         System.out.println("Search for 5: " + intList.search(5));
     }
 
+    /**
+     * Demonstrates basic operations on a doubly linked list of integers.
+     *
+     * Initializes a doubly linked list, appends several integer values, and prints the list in forward order.
+     */
     public static void testDoublyLinkedList() {
         System.out.println("\n=== Initialize Doubly Linked List ===");
         DoublyLinkedList<Integer> intList = new DoublyLinkedList<Integer>();
@@ -210,6 +260,11 @@ public class Main {
         intList.print();
     }
 
+    /**
+     * Demonstrates basic operations on a circular linked list of integers.
+     *
+     * Initializes a circular linked list, appends several integer values, and prints the list contents.
+     */
     public static void testCircularLinkedList() {
         System.out.println("\n=== Initialize Circular Linked List ===");
         CircularLinkedList<Integer> intList = new CircularLinkedList<Integer>();
@@ -224,6 +279,11 @@ public class Main {
         intList.print();
     }
 
+    /**
+     * Demonstrates the usage of a sorted linked list by inserting integers in non-sorted order and printing the sorted result.
+     *
+     * Initializes a sorted linked list, inserts several integer values using sorted insertion, and prints the list to show the maintained order.
+     */
     public static void testSortedLinkedList() {
         System.out.println("\n=== Initialize Sorted Linked List ===");
         ISortedLinkedList<Integer> intList = new SortedLinkedList<Integer>();
@@ -239,6 +299,11 @@ public class Main {
         intList.print();
     }
 
+    /**
+     * Demonstrates basic operations on a doubly ended linked list (deque) of integers.
+     *
+     * Initializes a doubly ended list, performs a sequence of insertions at both the front and end, and prints the resulting list.
+     */
     public static void testDoublyEndedList(){
         System.out.println("\n=== Initialize Doubly Ended Linked List ===");
         IDoublyEndedList<Integer> intList = new DoublyEndedList<>();
@@ -256,6 +321,11 @@ public class Main {
         intList.print();
     }
 
+    /**
+     * Demonstrates basic operations on an array-based stack of integers.
+     *
+     * Initializes a stack, pushes several values, then performs pop and peek operations while printing the results.
+     */
     public static void testStackArray(){
         System.out.println("\n=== Initialize Stack Array ===");
         IStackArray<Integer> intStack = new StackArray<>();
@@ -270,6 +340,11 @@ public class Main {
         System.out.println("Pop: " + intStack.pop());
     }
 
+    /**
+     * Demonstrates stack operations using a linked list implementation.
+     *
+     * Initializes a linked list-based stack, performs push, pop, and peek operations, and prints the results to the console.
+     */
     public static void testStackLinkedList(){
         System.out.println("\n=== Initialize Stack Linked List ===");
         IStackLinkedList<Integer> intStack = new StackLinkedList<>();
@@ -284,6 +359,11 @@ public class Main {
         System.out.println("Pop: " + intStack.pop());
     }
 
+    /**
+     * Demonstrates basic queue operations including enqueue, dequeue, and retrieving front and rear elements.
+     *
+     * Initializes a queue of integers, enqueues several values, dequeues three elements, and prints the results along with the current front and rear values.
+     */
     public static void testQueue(){
         System.out.println("\n=== Initialize Queue ===");
         IQueue<Integer> intQueue = new Queue<>();
@@ -309,6 +389,11 @@ public class Main {
         System.out.println("Rear: " + rear);
     }
 
+    /**
+     * Demonstrates the usage of an array-based queue by performing enqueue, dequeue, and inspection operations.
+     *
+     * Initializes an integer queue, enqueues several elements, dequeues three elements, and prints the dequeued values along with the current front and rear elements.
+     */
     public static void testQueueArray(){
         System.out.println("\n=== Initialize Queue Array ===");
         IQueue<Integer> intQueue = new QueueArray<>();
@@ -334,6 +419,11 @@ public class Main {
         System.out.println("Rear: " + rear);
     }
 
+    /**
+     * Demonstrates the usage of a linked list-based queue by performing enqueue, dequeue, and inspection operations.
+     *
+     * Initializes a queue, enqueues several integers, dequeues multiple elements, and prints the results along with the current front and rear elements.
+     */
     public static void testQueueLinkedList(){
         System.out.println("\n=== Initialize Queue Linked List ===");
         IQueue<Integer> intQueue = new QueueLinkedList<>();
@@ -359,6 +449,11 @@ public class Main {
         System.out.println("Rear: " + rear);
     }
 
+    /**
+     * Demonstrates the usage of a priority queue by enqueuing integer elements with specified priorities and dequeuing several elements to show priority-based removal order.
+     *
+     * This method initializes a priority queue, enqueues multiple integers with associated priorities, then dequeues and prints four elements to illustrate how the queue prioritizes elements.
+     */
     public static void testPriorityQueue(){
         System.out.println("\n=== Initialize Priority Queue ===");
         IPriorityQueue<Integer> intQueue = new PriorityQueue<>();
@@ -387,6 +482,12 @@ public class Main {
         System.out.println("Dequeue: " + item3);
     }
 
+    /**
+     * Demonstrates basic operations on a binary search tree, including insertion, inorder traversal, and search.
+     *
+     * Initializes a binary search tree of integers, inserts several values, prints the inorder traversal,
+     * and searches for the value 4, displaying whether it is found.
+     */
     public static void testBST(){
         System.out.println("\n=== Initialize Binary Search Tree ===");
         BinarySearchTree<Integer> bst = new BinarySearchTree<>();
@@ -407,6 +508,11 @@ public class Main {
         else System.out.println("false");
     }
 
+    /**
+     * Demonstrates insertion of multiple integers into an AVL tree.
+     *
+     * Initializes an AVL tree and inserts the values 10, 20, 30, 40, 50, and 25 to showcase automatic balancing during insertion.
+     */
     public static void testAVL(){
         AVLTest.main(null);
     }

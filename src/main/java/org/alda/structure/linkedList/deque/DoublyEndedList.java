@@ -68,8 +68,7 @@ public class DoublyEndedList<T> implements IDoublyEndedList<T>{
     }
 
     /**
-     * Prints the contents of the list.
-     * Each node's data is printed, followed by a new line.
+     * Prints the data of each node in the list from head to tail.
      */
     public void print() {
         Node<T> current = head;
