@@ -43,8 +43,10 @@ public class AVL<T extends Comparable<T>> {
             return new Node<>(key);
         } else if (key.compareTo(root.key) < 0) {
             root.left = insert(root.left, key);
-        } else {
+        } else if (key.compareTo(root.key) > 0) {
             root.right = insert(root.right, key);
+        } else {
+            return root; // Duplicate keys not allowed
         }
 
         root.height = 1 + Math.max(getHeight(root.left), getHeight(root.right));
@@ -73,8 +75,8 @@ public class AVL<T extends Comparable<T>> {
     }
 
     public Integer getBalance(Node<T> root) {
-        if(root == null) return 0;
-        return getHeight(root.left) + getHeight(root.right);
+        if (root == null) return 0;
+        return getHeight(root.left) - getHeight(root.right);
     }
 
     public Node<T> rotateRight(Node<T> z) {
