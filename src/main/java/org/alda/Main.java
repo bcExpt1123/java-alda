@@ -20,11 +20,8 @@ import org.alda.structure.stack.array.StackArray;
 import org.alda.structure.stack.linkedList.IStackLinkedList;
 import org.alda.structure.stack.linkedList.StackLinkedList;
 import org.alda.structure.tree.bst.BinarySearchTree;
-import org.alda.structure.tree.bst.bbt.AVL;
 import org.alda.structure.tree.bst.bbt.AVLTest;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 /**
