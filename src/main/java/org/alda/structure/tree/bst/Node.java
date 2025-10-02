@@ -22,9 +22,9 @@ public class Node<T> implements Printable {
     }
 
     /**
-     * Prints the node's key and the keys of its left and right children, if present, to the standard output.
+     * Print the node's key and the keys of its left and right children to standard output.
      *
-     * The output format is: "Data: [key], Left: [left.key], Right: [right.key]". Child information is omitted if the respective child is null.
+     * The output is "Data: [key]" with ", Left: [left.key]" and ", Right: [right.key]" appended only when those children are present.
      */
     public void print() {
         System.out.print("\nData: " + key);

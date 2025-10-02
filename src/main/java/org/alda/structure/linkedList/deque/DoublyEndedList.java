@@ -63,6 +63,11 @@ public class DoublyEndedList<T> implements IDoublyEndedList<T>{
         return tail;
     }
 
+    /**
+     * Set the list's tail node.
+     *
+     * @param tail the node to use as the new last element of the list, or `null` to indicate there is no tail
+     */
     public void setTail(Node<T> tail) {
         this.tail = tail;
     }

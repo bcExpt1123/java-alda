@@ -38,6 +38,15 @@ package org.alda.structure.tree.bst.bbt;
  */
 public class AVL<T extends Comparable<T>> {
 
+    /**
+     * Inserts a key into the subtree rooted at the given node and restores AVL balance.
+     *
+     * If the key already exists in the subtree, the tree is left unchanged (duplicates are not inserted).
+     *
+     * @param root the root of the subtree where the key should be inserted; may be null
+     * @param key  the value to insert
+     * @return     the root of the subtree after insertion and any necessary rebalancing
+     */
     public Node<T> insert(Node<T> root, T key) {
         if (root == null) {
             return new Node<>(key);
@@ -69,16 +78,36 @@ public class AVL<T extends Comparable<T>> {
         return root;
     }
 
+    /**
+     * Returns the height of the given node in the AVL subtree.
+     *
+     * @param root the node whose height is requested; may be {@code null}
+     * @return the node's height, or 0 if {@code root} is {@code null}
+     */
     public Integer getHeight(Node<T> root) {
         if(root == null) return 0;
         return root.height;
     }
 
+    /**
+     * Computes the balance factor of the given node.
+     *
+     * @param root the node whose balance factor to compute
+     * @return the balance factor defined as height(left subtree) minus height(right subtree); returns 0 if {@code root} is null
+     */
     public Integer getBalance(Node<T> root) {
         if (root == null) return 0;
         return getHeight(root.left) - getHeight(root.right);
     }
 
+    /**
+     * Performs a right rotation around the given subtree root.
+     *
+     * <p>Reassigns child pointers and updates node heights so the left child becomes the new root of the subtree.</p>
+     *
+     * @param z the root of the subtree to rotate; must have a non-null left child
+     * @return the new root of the subtree after rotation
+     */
     public Node<T> rotateRight(Node<T> z) {
         Node<T> y = z.left;
         Node<T> T = y.right;
