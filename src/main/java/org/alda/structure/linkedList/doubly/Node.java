@@ -32,10 +32,9 @@ public class Node<T> implements Printable {
     public Node<T> prev;
 
     /**
-     * Constructs a new {@code Node} with the specified data.
-     * The {@code next} and {@code prev} references are initialized to {@code null}.
+     * Create a new Node holding the specified data with its adjacent references set to null.
      *
-     * @param data The data to store in the node.
+     * @param data the value to store in this node
      */
     public Node(final T data) {
         this.data = data;

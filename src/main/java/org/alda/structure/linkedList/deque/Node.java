@@ -44,8 +44,9 @@ public class Node<T> implements Printable {
     }
 
     /**
-     * Constructs a new {@code Node} with {@code null} data. This is a default constructor
-     * that calls the main constructor with {@code null} as the data.
+     * Creates a new Node whose stored data is {@code null}.
+     *
+     * The created node's {@code next} and {@code prev} references are {@code null}.
      */
     public Node(){
         this(null);

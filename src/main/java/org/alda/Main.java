@@ -71,9 +71,9 @@ public class Main {
     }
 
     /**
-     * Displays a submenu for selecting and testing different types of linked lists.
+     * Display a submenu to select and run linked list demonstrations.
      *
-     * Loops until the user chooses to return to the main menu. For each selection, runs the corresponding linked list demonstration and waits for user input before returning to the submenu.
+     * Loops until the user selects "Back to Main Menu". For each valid selection, invokes the corresponding linked list test and waits for the user to press Enter before showing the submenu again.
      */
     private static void linkedListMenu() {
         while (true) {
@@ -207,9 +207,9 @@ public class Main {
     }
 
     /**
-     * Demonstrates basic operations on a simple linked list of integers, including appending, inserting, deleting, printing, and searching for elements.
+     * Demonstrates basic operations on a simple linked list of integers.
      *
-     * Initializes a simple linked list, performs a sequence of modifications, prints the list and head node, and displays search results for specific values.
+     * Performs appends, an insertion after the head, a deletion, prints the list and head node, and prints search results for selected values.
      */
     public static void testSimpleLinkedList() {
         System.out.println("\n=== Initialize Simple Linked List ===");
@@ -297,9 +297,10 @@ public class Main {
     }
 
     /**
-     * Demonstrates basic operations on a doubly ended linked list (deque) of integers.
+     * Demonstrates insertions at both front and end on a doubly ended linked list of integers.
      *
-     * Initializes a doubly ended list, performs a sequence of insertions at both the front and end, and prints the resulting list.
+     * Initializes a doubly-ended list, performs a sequence of appendFront and appendEnd operations,
+     * and prints the list in forward order.
      */
     public static void testDoublyEndedList(){
         System.out.println("\n=== Initialize Doubly Ended Linked List ===");
@@ -447,9 +448,9 @@ public class Main {
     }
 
     /**
-     * Demonstrates the usage of a priority queue by enqueuing integer elements with specified priorities and dequeuing several elements to show priority-based removal order.
+     * Demonstrates priority-based ordering by enqueuing integer elements with associated priorities and dequeuing several elements to show removal order.
      *
-     * This method initializes a priority queue, enqueues multiple integers with associated priorities, then dequeues and prints four elements to illustrate how the queue prioritizes elements.
+     * This method prints the enqueue actions and the first four dequeued values to illustrate how the priority queue selects items.
      */
     public static void testPriorityQueue(){
         System.out.println("\n=== Initialize Priority Queue ===");
@@ -480,10 +481,10 @@ public class Main {
     }
 
     /**
-     * Demonstrates basic operations on a binary search tree, including insertion, inorder traversal, and search.
+     * Demonstrates insertion, inorder traversal, and search on a binary search tree.
      *
-     * Initializes a binary search tree of integers, inserts several values, prints the inorder traversal,
-     * and searches for the value 4, displaying whether it is found.
+     * Builds a BinarySearchTree<Integer>, inserts the values 5, 3, 7, 1, 20, and 4,
+     * prints the tree's inorder traversal, and prints whether the value 4 is found.
      */
     public static void testBST(){
         System.out.println("\n=== Initialize Binary Search Tree ===");
