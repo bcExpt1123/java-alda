@@ -28,8 +28,6 @@ import java.util.Scanner;
  * Main class demonstrating various data structures with an interactive menu.
  */
 public class Main {
-    private static final Scanner scanner = new Scanner(System.in);
-
     /**
      * Launches the interactive console application for demonstrating various data structures.
      *
@@ -38,24 +36,25 @@ public class Main {
      * @param args command-line arguments (not used)
      */
     public static void main(String[] args) {
-        boolean running = true;
-        
-        while (running) {
-            displayMainMenu();
-            int choice = getMenuChoice(5);
-            
-            switch (choice) {
-                case 1 -> linkedListMenu();
-                case 2 -> stackMenu();
-                case 3 -> queueMenu();
-                case 4 -> treeMenu();
-                case 5 -> {
-                    System.out.println("\nThank you for using Data Structure Demo!");
-                    running = false;
+        try (Scanner scanner = new Scanner(System.in)) {
+            boolean running = true;
+
+            while (running) {
+                displayMainMenu();
+                int choice = getMenuChoice(scanner, 5);
+
+                switch (choice) {
+                    case 1 -> linkedListMenu(scanner);
+                    case 2 -> stackMenu(scanner);
+                    case 3 -> queueMenu(scanner);
+                    case 4 -> treeMenu(scanner);
+                    case 5 -> {
+                        System.out.println("\nThank you for using Data Structure Demo!");
+                        running = false;
+                    }
                 }
             }
         }
-        scanner.close();
     }
     /**
      * Displays the main menu options for selecting a data structure category or exiting the program.
@@ -75,7 +74,7 @@ public class Main {
      *
      * Loops until the user selects "Back to Main Menu". For each valid selection, invokes the corresponding linked list test and waits for the user to press Enter before showing the submenu again.
      */
-    private static void linkedListMenu() {
+    private static void linkedListMenu(Scanner scanner) {
         while (true) {
             System.out.println("\n=== Linked List Types ===");
             System.out.println("1. Simple Linked List");
@@ -86,7 +85,7 @@ public class Main {
             System.out.println("6. Back to Main Menu");
             System.out.print("\nEnter your choice (1-6): ");
             
-            int choice = getMenuChoice(6);
+            int choice = getMenuChoice(scanner, 6);
             if (choice == 6) break;
             
             System.out.println("\n=== Test Results ===");
@@ -97,7 +96,7 @@ public class Main {
                 case 4 -> testSortedLinkedList();
                 case 5 -> testDoublyEndedList();
             }
-            pressEnterToContinue();
+            pressEnterToContinue(scanner);
         }
     }
 
@@ -106,7 +105,7 @@ public class Main {
      *
      * Allows the user to choose between array-based and linked list-based stacks, runs the corresponding test demonstration, and returns to the main menu upon request.
      */
-    private static void stackMenu() {
+    private static void stackMenu(Scanner scanner) {
         while (true) {
             System.out.println("\n=== Stack Types ===");
             System.out.println("1. Array-based Stack");
@@ -114,7 +113,7 @@ public class Main {
             System.out.println("3. Back to Main Menu");
             System.out.print("\nEnter your choice (1-3): ");
             
-            int choice = getMenuChoice(3);
+            int choice = getMenuChoice(scanner, 3);
             if (choice == 3) break;
             
             System.out.println("\n=== Test Results ===");
@@ -122,7 +121,7 @@ public class Main {
                 case 1 -> testStackArray();
                 case 2 -> testStackLinkedList();
             }
-            pressEnterToContinue();
+            pressEnterToContinue(scanner);
         }
     }
 
@@ -132,7 +131,7 @@ public class Main {
      * Presents options for simple queue, array-based queue, linked list-based queue, and priority queue.
      * Executes the corresponding test method based on user selection and waits for user input before returning to the submenu.
      */
-    private static void queueMenu() {
+    private static void queueMenu(Scanner scanner) {
         while (true) {
             System.out.println("\n=== Queue Types ===");
             System.out.println("1. Simple Queue");
@@ -142,7 +141,7 @@ public class Main {
             System.out.println("5. Back to Main Menu");
             System.out.print("\nEnter your choice (1-5): ");
             
-            int choice = getMenuChoice(5);
+            int choice = getMenuChoice(scanner, 5);
             if (choice == 5) break;
             
             System.out.println("\n=== Test Results ===");
@@ -152,7 +151,7 @@ public class Main {
                 case 3 -> testQueueLinkedList();
                 case 4 -> testPriorityQueue();
             }
-            pressEnterToContinue();
+            pressEnterToContinue(scanner);
         }
     }
 
@@ -161,21 +160,21 @@ public class Main {
      *
      * Presents options for Binary Search Tree and AVL Tree, executes the corresponding test method based on user input, and waits for user confirmation before returning.
      */
-    private static void treeMenu() {
+    private static void treeMenu(Scanner scanner) {
         System.out.println("\n=== Tree Types ===");
         System.out.println("1. Binary Search Tree");
         System.out.println("2. AVL Tree");
         System.out.println("3. Back to Main Menu");
         System.out.print("\nEnter your choice (1-3): ");
         
-        int choice = getMenuChoice(3);
+        int choice = getMenuChoice(scanner, 3);
         if (choice == 3) return;
         
         System.out.println("\n=== Test Results ===");
         if (choice == 1) testBST();
         else if (choice == 2) testAVL();
         
-        pressEnterToContinue();
+        pressEnterToContinue(scanner);
     }
 
     /**
@@ -184,7 +183,7 @@ public class Main {
      * @param max the maximum valid menu option (inclusive)
      * @return the user's validated menu choice as an integer between 1 and {@code max}
      */
-    private static int getMenuChoice(int max) {
+    private static int getMenuChoice(Scanner scanner, int max) {
         while (true) {
             try {
                 int choice = Integer.parseInt(scanner.nextLine().trim());
@@ -201,7 +200,7 @@ public class Main {
     /**
      * Prompts the user to press Enter and waits for input before continuing.
      */
-    private static void pressEnterToContinue() {
+    private static void pressEnterToContinue(Scanner scanner) {
         System.out.print("\nPress Enter to continue...");
         scanner.nextLine();
     }

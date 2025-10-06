@@ -11,13 +11,10 @@ public class Utils {
      * @return the array elements separated by the delimiter; an empty string if the array has no elements
      */
     public static String intArrToStr(int[] arr, String delimiter) {
-        if (arr == null || delimiter == null) {
-            throw new IllegalArgumentException("Array and delimiter must not be null");
-        }
         return Arrays.stream(arr)
                 .mapToObj(String::valueOf)
--               .reduce((a, b) -> a + delimiter + b)
-               .collect(java.util.stream.Collectors.joining(delimiter));
+                .reduce((a, b) -> a + delimiter + b)
+                .orElse("");
     }
 
     /**
