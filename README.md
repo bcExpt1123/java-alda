@@ -1,4 +1,4 @@
-# Java Algorithms and Data Structures
+# Java Data Structures and Algorithms
 
 This repository contains implementations of various algorithms and data structures in Java. It is intended as a resource for learning and reference.
 
@@ -94,11 +94,11 @@ Implementation and usage of graphs.
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/bcExpt1123/java-alda.git
+    git clone https://github.com/bcExpt1123/java-dsa.git
     ```
 2. Navigate to the project directory:
     ```sh
-    cd java-alda
+    cd java-dsa
     ```
 
 ## Usage
@@ -107,9 +107,19 @@ Run code:
 ```sh
   mvn clean compile exec:java
 ```
+
 Run test:
 ```sh
   mvn test
+```
+
+Run Check style:
+```sh
+  mvn checkstyle:check
+```
+Or
+```sh
+  mvn checkstyle:checkstyle
 ```
 
 ## Contributing
